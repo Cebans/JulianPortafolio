@@ -10,17 +10,19 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     padding: 50px 0;
+    background-image: url(img/Banner_Linkedin.png);
 }
 
 .perfil-container {
     max-width: 600px;
     margin: auto;
+   
 }
 
 .foto-perfil {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
 }
 
 .btn {
