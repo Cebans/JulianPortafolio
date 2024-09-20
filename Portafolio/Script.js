@@ -21,3 +21,28 @@ function mostrarDetalles(proyectoId) {
 function cerrarModal() {
     document.getElementById('modal').style.display = 'none';
 }
+
+let slideIndex = 0;
+mostrarSlide(slideIndex);
+
+// Automático: Cambiar imagen cada 3 segundos
+setInterval(() => {
+    moverSlide(1);
+}, 3000); // Cambia el número de milisegundos si deseas un intervalo diferente
+
+function moverSlide(n) {
+    slideIndex += n;
+    mostrarSlide(slideIndex);
+}
+
+function mostrarSlide(n) {
+    let slides = document.getElementsByClassName('carousel-slide');
+    if (n >= slides.length) {
+        slideIndex = 0; // Volver al primer slide
+    } else if (n < 0) {
+        slideIndex = slides.length - 1; // Ir al último slide
+    }
+
+    // Muestra la diapositiva actual
+    slides[slideIndex].style.display = "block";
+}

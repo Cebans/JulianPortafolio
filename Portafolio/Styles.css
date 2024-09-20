@@ -93,3 +93,36 @@ body {
     font-size: 25px;
     cursor: pointer;
 }
+
+/* Estilos para el carrusel secuencial */
+#carrusel {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del área visible */
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    width: 200%; /* 3 imágenes, cada una con un ancho del 100% del contenedor */
+    animation: desplazamientoSecuencial 15s linear infinite; /* Animación secuencial infinita */
+}
+
+.carousel-slide {
+    min-width: 16.66%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animación para mostrar las imágenes una detrás de otra */
+@keyframes desplazamientoSecuencial {
+    0% {
+        transform: translateX(0); /* Inicia en la primera imagen */
+    }
+    100% {
+        transform: translateX(-50%); /* Termina desplazándose completamente hacia la última imagen */
+    }
+}
