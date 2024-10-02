@@ -5,8 +5,8 @@ function mostrarDetalles(proyectoId) {
         detalleProyecto.innerHTML = `
             <h2>Nombre del Proyecto 1</h2>
             <p>Descripción detallada del proyecto 1...</p>
-                <video height="300" height="450" controls>
-                <source src="VID/Animación de Personaje.mp4" type="Video Modelado 3D">
+                <video width="450" height="300" controls>
+                <source src="VID/Animación de Personaje.mp4" type="video/mp4">
                 </video>`;
     } else if (proyectoId === 'proyecto2') {
         detalleProyecto.innerHTML = `
