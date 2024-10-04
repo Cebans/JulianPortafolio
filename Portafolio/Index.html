@@ -8,40 +8,55 @@
 </head>
 <body>
 
-    <section id="perfil">
-        <div class="perfil-container">
-            <img src="img/Foto_perfil.png" alt="Foto de Perfil" class="foto-perfil">
-        </div>
+    <!-- Banner superior -->
+    <section id="banner">
+        <img src="img/Banner_Linkedin.png" alt="Banner">
     </section>
 
     <!-- Carrusel de imágenes -->
-<section id="carrusel">
-    <div class="carousel-container">
-        <div class="carousel-slide">
-            <img src="img/Dinamicidad.png" alt="Imagen 1">
+    <section id="carrusel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/Dinamicidad.png" alt="Imagen 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/Innovacion.png" alt="Imagen 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/Prfeesionalismo.png" alt="Imagen 3">
+            </div>
         </div>
-        <div class="carousel-slide">
-            <img src="img/Innovacion.png" alt="Imagen 2">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/Prfeesionalismo.png" alt="Imagen 3">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/Dinamicidad.png" alt="Imagen 1">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/Innovacion.png" alt="Imagen 2">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/Prfeesionalismo.png" alt="Imagen 3">
-        </div>
-    </div>
-</section>
-    <section>
-        <h1 style="font-family: Verdana; margin: 10px;">Julián Esteban Rodríguez Cepeda</h1>
-            <p style="font-family: lucida sans; margin: 10px ">Ingeniero en Multimedia | Filmmaker | Marketer</p>
-            <a href="https://www.linkedin.com/in/juli%C3%A1n-esteban-rodr%C3%ADguez-cepeda-63a6b7272/" target="_blank" class="btn" >Conectar en LinkedIn</a>
     </section>
+
+    <!-- Sección de Descripción del Perfil y Caja de Perfil -->
+    <section id="contenido">
+        <!-- Descripción del perfil -->
+        <div id="descripcion-perfil">
+            <h2>Sobre mí</h2>
+            <p>Mi pasión por el mundo audiovisual me impulsa a fusionar la creatividad con la estrategia, explorando nuevas formas de contar historias impactantes. Como Ingeniero en Multimedia, combino mis habilidades en la producción audiovisual con estrategias de marketing digital para crear campañas que no solo capturen la atención visual, sino que también logren resultados comerciales efectivos. Lidero proyectos que integran la planificación, las diferentes fases de producción y la ejecución de campañas, uniendo la narrativa visual con el marketing para maximizar el impacto.</p>
+            
+        </div>
+
+        <!-- Caja de Perfil con Foto y Redes Sociales -->
+        <div id="perfil">
+            <div class="perfil-container">
+                <img src="img/Foto_perfil.png" alt="Foto de Perfil" class="foto-perfil">
+                <h1>Julián Esteban Rodríguez Cepeda</h1>
+                <p>Ingeniero en Multimedia | Filmmaker | Marketer</p>
+                <div class="redes-sociales">
+                    <!-- Botón para LinkedIn -->
+                    <a href="https://www.linkedin.com/in/juli%C3%A1n-esteban-rodr%C3%ADguez-cepeda-63a6b7272/" target="_blank" class="social-btn">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <!-- Otros botones de redes -->
+                    <a href="https://twitter.com" target="_blank" class="social-btn">
+                        <img src="img/twitter-icon.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección de Proyectos -->
     <section id="proyectos">
         <h2>Proyectos</h2>
@@ -49,7 +64,7 @@
             <!-- Proyecto 1 -->
             <div class="proyecto" onclick="mostrarDetalles('proyecto1')">
                 <video width="450" height="300" controls>
-                <source src="Vid/Animación de Personaje.mp4" type="video/mp4">
+                    <source src="Vid/Animación de Personaje.mp4" type="video/mp4">
                 </video>
                 <h3>Nombre del Proyecto 1</h3>
                 <p>Breve descripción del proyecto 1...</p>
@@ -61,18 +76,8 @@
                 <h3>Nombre del Proyecto 2</h3>
                 <p>Breve descripción del proyecto 2...</p>
             </div>
-
-            <!-- Añade más proyectos de la misma manera -->
         </div>
     </section>
-
-    <!-- Modal de Detalles de Proyecto -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <div id="detalle-proyecto"></div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

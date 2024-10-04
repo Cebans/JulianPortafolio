@@ -5,95 +5,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Sección de Perfil */
-#perfil {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 50px 0;
-    background-image: url(img/Banner_Linkedin.png);
-}
-
-.perfil-container {
-    max-width: 600px;
-    margin: auto;
-    
-   
-}
-
-.foto-perfil {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Sección de Proyectos */
-#proyectos {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.proyectos-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.proyecto {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    overflow: hidden;
-    width: auto; 
-    height: auto;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.proyecto:hover {
-    transform: scale(1.05);
-}
-
-.proyecto img {
+/* Banner superior */
+#banner img {
     width: 100%;
     height: auto;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    color: red;
-    float: right;
-    font-size: 25px;
-    cursor: pointer;
 }
 
 /* Estilos para el carrusel secuencial */
@@ -126,5 +41,121 @@ body {
     }
     100% {
         transform: translateX(-50%); /* Termina desplazándose completamente hacia la última imagen */
+    }
+}
+
+/* Sección de Descripción y Perfil */
+#contenido {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Descripción del perfil */
+#descripcion-perfil {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#descripcion-perfil h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#descripcion-perfil p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Caja de Perfil */
+#perfil {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    border-radius: 15px; /* Esquinas redondeadas */
+    border: 2px solid white; /* Borde blanco */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#perfil h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#perfil p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Botones de redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.social-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sección de Proyectos (ajuste de tamaño) */
+#proyectos {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.proyectos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proyecto {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 450px; /* Tamaño original de los proyectos */
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.proyecto img, .proyecto video {
+    width: 100%;
+    height: auto;
+}
+
+/* Animación de carrusel */
+@keyframes desplazamientoSecuencial {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-66.66%);
     }
 }
