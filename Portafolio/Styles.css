@@ -26,7 +26,7 @@ body {
 }
 
 .carousel-slide {
-    min-width: 16.66%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    min-width: 0%; /* Cada imagen ocupa el 100% del ancho del contenedor */
     box-sizing: border-box;
 }
 
