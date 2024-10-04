@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /* Banner superior */
@@ -50,11 +51,13 @@ body {
     justify-content: space-between;
     padding: 20px;
     margin-top: 30px;
+    font-family: 'Courier New';
 }
 
 /* Descripción del perfil */
 #descripcion-perfil {
     flex: 1;
+    text-align: justify;
     padding-right: 20px;
 }
 
@@ -70,7 +73,7 @@ body {
 
 /* Caja de Perfil */
 #perfil {
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     padding: 20px;
     width: 300px;
@@ -121,6 +124,8 @@ body {
 #proyectos {
     padding: 50px 0;
     background-color: #fff;
+    margin-left: 30px;
+    font-family: 'Courier New';
 }
 
 .proyectos-container {
@@ -149,13 +154,41 @@ body {
     width: 100%;
     height: auto;
 }
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Queda fijo en la pantalla */
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+}
 
-/* Animación de carrusel */
-@keyframes desplazamientoSecuencial {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-66.66%);
-    }
+/* Contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrado en la página */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del contenido del modal */
+    max-width: 600px; /* Máximo ancho */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilo del botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

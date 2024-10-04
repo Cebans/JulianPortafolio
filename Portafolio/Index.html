@@ -12,29 +12,42 @@
     <section id="banner">
         <img src="img/Banner_Linkedin.png" alt="Banner">
     </section>
-
+    
     <!-- Carrusel de imágenes -->
-    <section id="carrusel">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/Dinamicidad.png" alt="Imagen 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="img/Innovacion.png" alt="Imagen 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="img/Prfeesionalismo.png" alt="Imagen 3">
-            </div>
+<section id="carrusel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="img/Dinamicidad.png" alt="Imagen 1">
         </div>
-    </section>
+        <div class="carousel-slide">
+            <img src="img/Innovacion.png" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/Prfeesionalismo.png" alt="Imagen 3">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/Dinamicidad.png" alt="Imagen 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/Innovacion.png" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/Prfeesionalismo.png" alt="Imagen 3">
+        </div>
+    </div>
+</section>
 
     <!-- Sección de Descripción del Perfil y Caja de Perfil -->
     <section id="contenido">
         <!-- Descripción del perfil -->
         <div id="descripcion-perfil">
             <h2>Sobre mí</h2>
-            <p>Mi pasión por el mundo audiovisual me impulsa a fusionar la creatividad con la estrategia, explorando nuevas formas de contar historias impactantes. Como Ingeniero en Multimedia, combino mis habilidades en la producción audiovisual con estrategias de marketing digital para crear campañas que no solo capturen la atención visual, sino que también logren resultados comerciales efectivos. Lidero proyectos que integran la planificación, las diferentes fases de producción y la ejecución de campañas, uniendo la narrativa visual con el marketing para maximizar el impacto.</p>
-            
+            <p>Mi pasión por el mundo audiovisual me impulsa a fusionar la creatividad con la estrategia, 
+                explorando nuevas formas de contar historias impactantes. Como Ingeniero en Multimedia, 
+                combino mis habilidades en la producción audiovisual con estrategias de marketing digital 
+                para crear campañas que no solo capturen la atención visual, sino que también logren resultados comerciales efectivos.
+                 Lidero proyectos que integran la planificación, las diferentes fases de producción y la ejecución de campañas,
+                  uniendo la narrativa visual con el marketing para maximizar el impacto.</p> 
         </div>
 
         <!-- Caja de Perfil con Foto y Redes Sociales -->
@@ -46,11 +59,11 @@
                 <div class="redes-sociales">
                     <!-- Botón para LinkedIn -->
                     <a href="https://www.linkedin.com/in/juli%C3%A1n-esteban-rodr%C3%ADguez-cepeda-63a6b7272/" target="_blank" class="social-btn">
-                        <img src="img/linkedin-icon.png" alt="LinkedIn">
+                        <img src="img/logolinked.png" alt="LinkedIn">
                     </a>
                     <!-- Otros botones de redes -->
-                    <a href="https://twitter.com" target="_blank" class="social-btn">
-                        <img src="img/twitter-icon.png" alt="Twitter">
+                    <a href="https://www.instagram.com/cebans_tw/" target="_blank" class="social-btn">
+                        <img src="img/instagram.png" alt="Instagram">
                     </a>
                 </div>
             </div>
@@ -66,7 +79,7 @@
                 <video width="450" height="300" controls>
                     <source src="Vid/Animación de Personaje.mp4" type="video/mp4">
                 </video>
-                <h3>Nombre del Proyecto 1</h3>
+                <h3>Modelado 3D a partir de ilustración</h3>
                 <p>Breve descripción del proyecto 1...</p>
             </div>
 
@@ -80,5 +93,14 @@
     </section>
 
     <script src="script.js"></script>
+    <!-- Modal para mostrar detalles del proyecto -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3 id="modal-titulo"></h3>
+        <img id="modal-imagen" src="" alt="Imagen del proyecto" style="width: 100%; height: auto;"/>
+        <p id="modal-descripcion"></p>
+    </div>
+</div>
 </body>
 </html>
