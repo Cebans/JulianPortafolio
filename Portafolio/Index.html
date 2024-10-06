@@ -46,8 +46,10 @@
                 <source src="Vid/Profesionalismo 2.mp4" type="video/mp4">
             </video>
         </div>
-        
+</div>
     </div>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
 </section>
 
     <!-- Sección de Descripción del Perfil y Caja de Perfil -->
@@ -94,24 +96,41 @@
         </div>
     </section>
 
-    <!-- Sección de Proyectos -->
     <section id="proyectos">
-        <h2>Proyectos</h2>
+        <h2 style="color: azure; margin: 20px;">Proyectos</h2>
         <div class="proyectos-container">
             <!-- Proyecto 1 -->
-            <div class="proyecto" onclick="mostrarDetalles('proyecto1')">
+            <div class="proyecto" onclick="window.open('Modelado_3D.html', '_blank')">
                 <video width="450" height="300" controls>
                     <source src="Vid/Animación de Personaje.mp4" type="video/mp4">
                 </video>
                 <h3>Modelado 3D a partir de ilustración</h3>
-                <p>Breve descripción del proyecto 1...</p>
+                <p style="text-align: center;">El proyecto consiste en un modelado 3D desarrollado a partir de la identidad visual creada por una diseñadora gráfica. Para su realización, se consideraron cuidadosamente los colores, la tipografía y el estilo característico de su marca personal.</p>
             </div>
-
+    
             <!-- Proyecto 2 -->
-            <div class="proyecto" onclick="mostrarDetalles('proyecto2')">
-                <img src="imagen-proyecto2.jpg" alt="Proyecto 2">
-                <h3>Nombre del Proyecto 2</h3>
-                <p>Breve descripción del proyecto 2...</p>
+            <div class="proyecto" onclick="window.open('Visage Divine.html', '_blank')">
+                <video width="450" height="300" controls muted>
+                    <source src="VID/" type="video/mp4">
+                </video>
+                <h3>Promocional de marca “VISAGE DIVINE”</h3>
+                <p style="text-align: center;">El proyecto consiste en un modelado 3D desarrollado a partir de la identidad visual creada por una diseñadora gráfica. Para su realización, se consideraron cuidadosamente los colores, la tipografía y el estilo característico de su marca personal.</p>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="proyecto" onclick="window.open('Visage Divine.html', '_blank')">
+                <video width="450" height="300" controls muted>
+                    <source src="Vid/" type="video/mp4">
+                </video>
+                <h3>Promocional de marca “VISAGE DIVINE”</h3>
+                <p style="text-align: center;">El proyecto consiste en un modelado 3D desarrollado a partir de la identidad visual creada por una diseñadora gráfica. Para su realización, se consideraron cuidadosamente los colores, la tipografía y el estilo característico de su marca personal.</p>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="proyecto" onclick="window.open('Visage Divine.html', '_blank')">
+                <video width="450" height="300" controls muted>
+                    <source src="Vid/" type="video/mp4">
+                </video>
+                <h3>Promocional de marca “VISAGE DIVINE”</h3>
+                <p style="text-align: center;">El proyecto consiste en un modelado 3D desarrollado a partir de la identidad visual creada por una diseñadora gráfica. Para su realización, se consideraron cuidadosamente los colores, la tipografía y el estilo característico de su marca personal.</p>
             </div>
         </div>
     </section>

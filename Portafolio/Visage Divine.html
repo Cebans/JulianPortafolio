@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1: Stop Motion Film</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+    <header>
+        <h1>Promocional de marca “VISAGE DIVINE”</h1>
+    </header>
+
+    <section id="descripcion-proyecto">
+        <h2>Descripción del Proyecto</h2>
+        <p>Descripción general</p>
+    </section>
+
+    <section id="detalles">
+        <h2>Detalles del Proyecto</h2>
+        <ul>
+            <li><strong>Duración:</strong> 2 minutos</li>
+            <li><strong>Técnica:</strong> Animación, modelado 3D y producción audiovisual</li>
+            <li><strong>Software:</strong> Blender, After Effects, Premiere</li>
+            <li><strong>Fecha de Finalización:</strong> Agosto 2024</li>
+        </ul>
+    </section>
+
+    <section id="video-principal">
+        <h2>Video del Proyecto</h2>
+        <video width="450" height="300" controls muted>
+            <source src="VID/VISAGE DIVINE.mp4" type="video/mp4">
+        </video>
+
+        <div id="thumbnail-container">
+            <button onclick="changeVideo('proyecto1-video.mp4')">
+                <img src="img/Tienda terminada.png" alt="Thumbnail 1" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-extra1.mp4')">
+                <img src="img/RENDER ILUM.png" alt="Thumbnail 2" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-extra2.mp4')">
+                <img src="img/Render pestañina.png" alt="Thumbnail 3" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-extra3.mp4')">
+                <img src="img/Texturas.png" alt="Thumbnail 4" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-extra3.mp4')">
+                <img src="img/Texturas 2.png" alt="Thumbnail 4" class="thumbnail">
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Julián Rodríguez - Proyecto de Stop Motion</p>
+    </footer>
+
+    <script>
+        function changeVideo(videoSrc) {
+            document.getElementById("main-video").src = videoSrc;
+            document.getElementById("main-video").play();
+        }
+    </script>
+
+</body>
+</html>

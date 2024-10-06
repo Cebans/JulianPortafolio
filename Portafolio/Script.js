@@ -29,3 +29,21 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+let currentSlide = 0; // Índice del slide actual
+const slides = document.querySelectorAll('.carousel-slide'); // Selecciona todos los slides
+
+function moveSlide(direction) {
+    // Oculta todos los slides
+    slides.forEach(slide => slide.style.display = 'none');
+    
+    // Calcula el nuevo índice
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    
+    // Muestra el nuevo slide
+    slides[currentSlide].style.display = 'block';
+}
+
+// Inicializa el carrusel mostrando el primer slide
+slides.forEach(slide => slide.style.display = 'none'); // Oculta todos los slides al inicio
+slides[0].style.display = 'block'; // Muestra el primer slide inicialmente
+
