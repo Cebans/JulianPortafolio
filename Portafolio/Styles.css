@@ -61,10 +61,23 @@ body {
     padding-right: 20px;
 }
 
+#descripcion-perfil {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%;
+}
 #descripcion-perfil h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+
 
 #descripcion-perfil p {
     font-size: 16px;
@@ -73,14 +86,14 @@ body {
 
 /* Caja de Perfil */
 #perfil {
-    background-color: #000000;
-    color: white;
+    background-color: #030700;
+    color: rgb(126, 111, 255);
     padding: 20px;
     width: 300px;
     height: auto;
     text-align: center;
     border-radius: 15px; /* Esquinas redondeadas */
-    border: 2px solid white; /* Borde blanco */
+    border: 2px solid rgb(16, 141, 0); /* Borde blanco */
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
