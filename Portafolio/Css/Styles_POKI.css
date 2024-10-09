@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
@@ -40,6 +41,7 @@ ul li {
 
 #imagen_principal {
     text-align: center;
+    border-radius: 20px;
 }
 
 #video-principal video {

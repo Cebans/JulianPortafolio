@@ -145,8 +145,9 @@ body {
 }
 
 .social-btn img {
-    width: 40px;
+    width: auto;
     height: 40px;
+    align-items: center;
 }
 
 /* Sección de Proyectos */
