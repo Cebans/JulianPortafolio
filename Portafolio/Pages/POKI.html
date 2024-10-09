@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preproducción para videojuego "POKI"</title>
+    <link rel="stylesheet" href="../Css/Styles_POKI.css">
+</head>
+<body>
+
+    <header>
+        <h1>Modelado 3D a partir de ilustración</h1>
+    </header>
+
+    <section id="descripcion-proyecto">
+        <h2>Descripción del Proyecto</h2>
+        <p>El proyecto consiste en un modelado 3D desarrollado a partir de la identidad visual creada por una diseñadora gráfica. Para su realización, se consideraron cuidadosamente los colores, la tipografía y el estilo característico de su marca personal. Estos elementos fueron fundamentales para construir un modelo 3D que reflejara coherentemente su visión creativa. Además, se adaptó la animación del modelo tomando en cuenta la personalidad que la diseñadora nos describió, lo que permitió generar una representación fiel y dinámica de su identidad, alineada con los valores y emociones que desea transmitir a su audiencia. Esta integración entre diseño gráfico y modelado 3D no solo resalta la estética, sino también el carácter único de la diseñadora, logrando un resultado visualmente atractivo y personalizado.</p>
+    </section>
+
+    <section id="detalles">
+        <h2>Detalles del Proyecto</h2>
+        <ul>
+            <li><strong>Duración:</strong> 5 Segundos</li>
+            <li><strong>Técnica:</strong> Animación y modelado 3D</li>
+            <li><strong>Software:</strong> Blender</li>
+            <li><strong>Fecha de Finalización:</strong> Agosto 2024</li>
+        </ul>
+    </section>
+
+    <section id="imagen_principal">
+        <h2>Descripción Visual</h2>
+        <img src="../img/Escenario 2.png "width="450" height="300">
+
+        <div id="thumbnail-container">
+            <button onclick="changeVideo('proyecto1-video.mp4')">
+                <img src="../img/Poky ModelSheet.png" alt="Thumbnail 1" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-video.mp4')">
+                <img src="../img/PROPS .png" alt="Thumbnail 2" class="thumbnail">
+            </button>
+            <button onclick="changeVideo('proyecto1-extra2.mp4')">
+                <img src="../img/PROPS ANVERSO.png" alt="Thumbnail 3" class="thumbnail">
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Julián Rodríguez - Proyecto de Stop Motion</p>
+    </footer>
+
+    <script>
+        function changeVideo(videoSrc) {
+            document.getElementById("main-video").src = videoSrc;
+            document.getElementById("main-video").play();
+        }
+    </script>
+
+</body>
+</html>
