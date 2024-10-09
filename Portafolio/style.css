@@ -266,3 +266,10 @@ body {
         width: 100%; /* Proyectos ocupan todo el ancho en móviles */
     }
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #C8D22C;
+    color: #192C4E;
+}
