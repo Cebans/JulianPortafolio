@@ -1,7 +1,7 @@
 body {
     background-color: #01172e; /* Color de fondo azul */
     color: white; /* Color del texto blanco */
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
 }
@@ -40,6 +40,56 @@ ul li {
 
 #video-principal {
     text-align: center;
+    padding: 20px;
+}
+video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción del video */
+}
+
+.video-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#thumbnail-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las miniaturas se muevan a la siguiente línea si no hay suficiente espacio */
+    justify-content: center; /* Centra las miniaturas */
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 120px; /* Ancho fijo para las miniaturas */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 5px; /* Espaciado entre las miniaturas */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10; /* Asegúrate de que esté por encima de la imagen */
 }
 
 #video-principal video {
@@ -80,4 +130,61 @@ footer {
     padding: 20px;
     background-color: #001224;
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 80px; /* Reduce el tamaño de las miniaturas en pantallas más pequeñas */
+    }
+
+    .social-icon {
+        width: 100px; /* Ajusta el tamaño del icono social */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del encabezado en pantallas muy pequeñas */
+    }
+
+    video {
+        width: 100%; /* Asegúrate de que el video ocupe todo el ancho en móviles */
+    }
+}
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Queda en la pantalla */
+    z-index: 1000; /* Se superpone a otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Permite scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Máximo ancho */
+    max-height: 80%; /* Máxima altura */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+#caption {
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    width: 80%;
 }

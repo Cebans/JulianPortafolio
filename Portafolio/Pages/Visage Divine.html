@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto 1: Stop Motion Film</title>
+    <title>VISAGE DIVINE</title>
     <link rel="stylesheet" href="../Css/Styles3.css">
 </head>
 <body>
@@ -14,7 +14,15 @@
 
     <section id="descripcion-proyecto">
         <h2>Descripción del Proyecto</h2>
-        <p>Descripción general</p>
+        <p>Este proyecto consistió en la creación de un video promocional para la marca de cosméticos Visage Divine, donde se modelaron productos y una tienda, se generaron secuencias animadas y se realizaron renders con una estética realista, combinando todos los elementos en la postproducción para lograr un resultado visualmente atractivo y de alta calidad.</p>
+        <h3>Modelado 3D de los Productos: </h3>
+        <p>Se modelaron en detalle dos de los productos insignia de la marca: un iluminador y una pestañina. El proceso incluyó la creación de superficies realistas, texturas detalladas y materiales que reflejaran con precisión el aspecto de los cosméticos. La meta era captar la elegancia y calidad premium de Visage Divine, logrando que cada producto resaltara visualmente.</p>
+        <h3>Modelado de la Tienda:</h3>
+        <p>La tienda fue diseñada y modelada en 3D para funcionar como el escenario principal del promocional. Se conceptualizó un espacio moderno, minimalista y sofisticado, que reflejara la esencia de lujo de la marca. Cada elemento, desde las vitrinas hasta la disposición de los productos, fue cuidadosamente diseñado para crear una atmósfera que potenciara la experiencia visual del espectador.</p>
+        <h3>Secuencias Animadas y Renders:</h3>
+        <p> Se crearon secuencias animadas que mostraban los productos en distintas situaciones, como en la tienda y en primeros planos detallados, con un enfoque en la estética realista. Los juegos de luces fueron fundamentales para destacar la textura y los acabados de los productos, simulando una iluminación profesional que enfatizara los reflejos y sombras naturales. Se realizaron varios renders con alta calidad para captar los pequeños detalles y lograr una sensación visualmente envolvente.</p>
+        <h3>Postproducción y Ajustes Finales: </h3>
+        <p>En la fase de postproducción, se trabajó en la combinación de todas las secuencias y renders. Se ajustaron los colores, se optimizó el contraste y se perfeccionaron los detalles visuales para garantizar un acabado pulido. Además, se añadió una pista de sonido cuidadosamente seleccionada, alineada con la identidad de la marca, y se realizaron ajustes de sonido para acompañar el ritmo del video promocional.</p>
     </section>
 
     <section id="detalles">
@@ -22,46 +30,97 @@
         <ul>
             <li><strong>Duración:</strong> 2 minutos</li>
             <li><strong>Técnica:</strong> Animación, modelado 3D y producción audiovisual</li>
-            <li><strong>Software:</strong> Blender, After Effects, Premiere</li>
-            <li><strong>Fecha de Finalización:</strong> Agosto 2024</li>
+            <li><strong>Software:</strong> Blender, After Effects, Premiere </li> <div class="image-container">
+                <img src="../img/blender logo.png" alt="logo de blender">
+                <img src="../img/Adobe_After_Effects_CC_icon.svg.png" alt="logo de krita">
+                <img src="../img/Adobe_Premiere_Pro_CC_icon.svg.png" alt="logo de krita">
+            </div>
+        </li>
+            <li><strong>Fecha de Finalización:</strong> Junio 2024</li>
         </ul>
     </section>
 
-    <section id="video-principal">
-        <h2>Video del Proyecto</h2>
-        <video width="450" height="300" controls muted>
-            <source src="../VID/VISAGE DIVINE.mp4" type="video/mp4">
-        </video>
+    <style>
+        .image-container img {
+            display: inline-block;
+            width: 70pxpx; /* Ajusta este tamaño según tus necesidades */
+            height: 70px;
+            margin-right: 10px; /* Espacio entre las imágenes */
+            vertical-align: middle; /* Alinea las imágenes con el texto, si es necesario */
+            background-color: rgb(1, 0, 77);
+            border-radius: 20px;
+        }
+    </style>
 
-        <div id="thumbnail-container">
-            <button onclick="changeVideo('proyecto1-video.mp4')">
-                <img src="../img/Tienda terminada.png" alt="Thumbnail 1" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra1.mp4')">
-                <img src="../img/RENDER ILUM.png" alt="Thumbnail 2" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra2.mp4')">
-                <img src="../img/Render pestañina.png" alt="Thumbnail 3" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra3.mp4')">
-                <img src="../img/Texturas.png" alt="Thumbnail 4" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra3.mp4')">
-                <img src="../img/Texturas 2.png" alt="Thumbnail 4" class="thumbnail">
-            </button>
+<section id="video-principal">
+    <h2>Video del Proyecto</h2>
+    <div class="video-container">
+        <video controls muted>
+            <source src="../VID/VISAGE DIVINE.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+
+    <div id="thumbnail-container">
+        <button onclick="changeVideo('proyecto1-video.mp4')">
+            <img src="../img/Tienda terminada.png" alt="Thumbnail 1" class="thumbnail" onclick="event.stopPropagation(); openModal(this.src);">
+        </button>
+        <button onclick="changeVideo('proyecto1-extra1.mp4')">
+            <img src="../img/RENDER ILUM.png" alt="Thumbnail 2" class="thumbnail" onclick="event.stopPropagation(); openModal(this.src);">
+        </button>
+        <button onclick="changeVideo('proyecto1-extra2.mp4')">
+            <img src="../img/Render pestañina.png" alt="Thumbnail 3" class="thumbnail" onclick="event.stopPropagation(); openModal(this.src);">
+        </button>
+        <button onclick="changeVideo('proyecto1-extra3.mp4')">
+            <img src="../img/Texturas.png" alt="Thumbnail 4" class="thumbnail" onclick="event.stopPropagation(); openModal(this.src);">
+        </button>
+        <button onclick="changeVideo('proyecto1-extra4.mp4')">
+            <img src="../img/Texturas 2.png" alt="Thumbnail 5" class="thumbnail" onclick="event.stopPropagation(); openModal(this.src);">
+        </button>
+        <a href="https://www.behance.net/gallery/209868423/Promocional-de-marca-VISAGE-DIVINE" target="guia a behance" class="social-btn">
+            <img src="../img/Behance-logo.png" alt="Behance" class="social-icon">
+        </a>
+    </div>
+
+    <!-- Modal para la imagen expandida -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expanded-img" alt="Expanded Image">
+        <div id="caption"></div>
+    </div>
+</section>
+            
+            <style>
+                .social-icon {
+                    width: 120px;
+                    height: auto;
+                }
+            </style>
         </div>
+        
     </section>
 
+    
     <footer>
         <p>© 2024 Julián Rodríguez - Proyecto de Stop Motion</p>
     </footer>
 
     <script>
-        function changeVideo(videoSrc) {
-            document.getElementById("main-video").src = videoSrc;
-            document.getElementById("main-video").play();
-        }
-    </script>
+        function openModal(src) {
+    var modal = document.getElementById("modal");
+    var img = document.getElementById("expanded-img");
+    var caption = document.getElementById("caption");
+
+    img.src = src; // Establece la fuente de la imagen expandida
+
+    modal.style.display = "block"; // Muestra el modal
+}
+
+function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none"; // Oculta el modal
+}
+        </script>
 
 </body>
 </html>

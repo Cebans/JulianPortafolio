@@ -22,10 +22,25 @@
         <ul>
             <li><strong>Duración:</strong> 5 Segundos</li>
             <li><strong>Técnica:</strong> Animación y modelado 3D</li>
-            <li><strong>Software:</strong> Blender</li>
+            <li><strong>Software:</strong> Blender </li>
+                <div class="image-container">
+                    <img src="../img/blender logo.png" alt="logo de krita">
+                </li>
             <li><strong>Fecha de Finalización:</strong> Agosto 2024</li>
         </ul>
     </section>
+
+    <style>
+        .image-container img {
+            display: inline-block;
+            width: 70pxpx; /* Ajusta este tamaño según tus necesidades */
+            height: 70px;
+            margin-right: 10px; /* Espacio entre las imágenes */
+            vertical-align: middle; /* Alinea las imágenes con el texto, si es necesario */
+            background-color: rgb(59, 0, 94);
+            border-radius: 20px;
+        }
+    </style>
 
     <section id="video-principal">
         <h2>Video del Proyecto</h2>
@@ -35,30 +50,43 @@
 
         <div id="thumbnail-container">
             <button onclick="changeVideo('proyecto1-video.mp4')">
-                <img src="../img/logolinked.png" alt="Thumbnail 1" class="thumbnail">
+                <img src="../img/Proceso Danna.png" alt="Thumbnail 1" class="thumbnail">
             </button>
-            <button onclick="changeVideo('proyecto1-extra1.mp4')">
-                <img src="thumbnail2.jpg" alt="Thumbnail 2" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra2.mp4')">
-                <img src="thumbnail3.jpg" alt="Thumbnail 3" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra3.mp4')">
-                <img src="thumbnail4.jpg" alt="Thumbnail 4" class="thumbnail">
-            </button>
+            <a href="https://www.behance.net/gallery/209497295/Produccion-3D-de-identidad-visual" target="guia a behance" class="social-btn">
+                <img src="../img/Behance-logo.png" alt="LinkedIn" class="social-icon">
+            </a>
+           
+            <style>
+                .social-icon {
+                    width: 120px;
+                    height: auto;
+                }
+            </style>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Julián Rodríguez - Proyecto de Stop Motion</p>
+        <p>© 2024 Julián Rodríguez - Proyecto de Ilustración 3D</p>
     </footer>
 
     <script>
-        function changeVideo(videoSrc) {
-            document.getElementById("main-video").src = videoSrc;
-            document.getElementById("main-video").play();
-        }
-    </script>
+    function changeVideo(videoSrc) {
+        document.getElementById("main-video").src = videoSrc;
+        document.getElementById("main-video").play();
+    }
+
+    function expandImage(image) {
+        const overlay = document.getElementById("overlay");
+        const expandedImage = document.getElementById("expanded-image");
+
+        expandedImage.src = image.src;
+        overlay.style.display = "flex";
+    }
+
+    function closeOverlay() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
 
 </body>
 </html>

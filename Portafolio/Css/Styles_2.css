@@ -2,7 +2,7 @@
 body {
     background-color: #003366; /* Color de fondo azul */
     color: white; /* Color del texto blanco */
-    font-family: Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
 }
@@ -44,6 +44,8 @@ ul li {
 }
 
 #video-principal video {
+    width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+    max-width: 450px; /* Limita el ancho máximo */
     margin-bottom: 20px;
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -53,16 +55,15 @@ ul li {
 #thumbnail-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap; /* Permite que los thumbnails se envuelvan en varias líneas */
+    margin-top: 20px;
 }
 
 .thumbnail {
-    width: 100px;
-    height: 70px;
-    border: 2px solid white;
-    border-radius: 5px;
+    width: 120px;
+    height: auto;
     cursor: pointer;
-    transition: transform 0.2s;
+    margin: 10px;
 }
 
 .thumbnail:hover {
@@ -82,3 +83,37 @@ footer {
     background-color: #00264d;
     color: white;
 }
+/* Consultas de medios para mejorar la responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    section {
+        width: 95%; /* Aumenta el ancho de la sección en pantallas pequeñas */
+        padding: 15px; /* Reduce el padding */
+    }
+
+    #video-principal video {
+        max-width: 100%; /* Permite que el video ocupe todo el ancho disponible */
+    }
+
+    .thumbnail {
+        width: 80px; /* Reduce el tamaño de los thumbnails en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Ajusta aún más el tamaño del título para dispositivos muy pequeños */
+    }
+
+    section {
+        padding: 10px; /* Reduce aún más el padding */
+    }
+
+    .thumbnail {
+        width: 60px; /* Reduce más el tamaño de los thumbnails en pantallas muy pequeñas */
+    }
+}
+

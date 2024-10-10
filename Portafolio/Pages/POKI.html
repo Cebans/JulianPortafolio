@@ -15,12 +15,12 @@
     <section id="descripcion-proyecto">
         <h2>Descripción del Proyecto</h2>
         <p>El proyecto consistió en la preproducción de elementos clave para el desarrollo del videojuego Poki. El enfoque principal fue la creación de los recursos visuales necesarios para dar vida a los personajes, los objetos (props) y los escenarios del juego, siguiendo un estilo visual consistente y alineado con la narrativa del juego.</p>
-
-            <p> Model Sheet del Personaje Principal: Se diseñó un model sheet detallado para el protagonista, Poki, que incluyó vistas frontales, laterales y traseras. Este documento sirvió como guía fundamental para el modelado en 3D, asegurando que cada detalle de su diseño estuviera bien definido desde los ángulos más importantes. Además, se establecieron expresiones faciales y poses clave que reflejan la personalidad de Poki, ayudando a comprender su carácter dentro del mundo del videojuego.</p>
-            
-                <p> Modelado de Props: Se realizaron modelos 3D de los objetos interactivos y decorativos que formarían parte del entorno del juego, como cofres, barriles, y armas. Cada prop fue diseñado para mantener la coherencia estilística con el resto del mundo de Poki, con un enfoque en optimización para su integración dentro del motor de juego. Los detalles fueron cuidadosamente modelados para garantizar una correcta interacción y funcionalidad dentro de la jugabilidad.</p>
-            
-                    <p> Modelado del Escenario: El escenario fue conceptualizado y modelado en 3D siguiendo el estilo visual del juego, con la intención de crear un entorno inmersivo. El entorno fue diseñado para ser modular, facilitando la expansión y reutilización de activos en diferentes niveles del juego.</p>
+        <h3> Model Sheet del Personaje Principal:</h3>
+            <p>Se diseñó un model sheet detallado para el protagonista, Poki, que incluyó vistas frontales, laterales y traseras. Este documento sirvió como guía fundamental para el modelado en 3D, asegurando que cada detalle de su diseño estuviera bien definido desde los ángulos más importantes. Además, se establecieron expresiones faciales y poses clave que reflejan la personalidad de Poki, ayudando a comprender su carácter dentro del mundo del videojuego.</p>
+            <h3>Modelado de Props:</h3>
+            <p>Se realizaron modelos 3D de los objetos interactivos y decorativos que formarían parte del entorno del juego, como cofres, barriles, y armas. Cada prop fue diseñado para mantener la coherencia estilística con el resto del mundo de Poki, con un enfoque en optimización para su integración dentro del motor de juego. Los detalles fueron cuidadosamente modelados para garantizar una correcta interacción y funcionalidad dentro de la jugabilidad.</p>
+            <h3>Modelado del Escenario:</h3>
+            <p> El escenario fue conceptualizado y modelado en 3D siguiendo el estilo visual del juego, con la intención de crear un entorno inmersivo. El entorno fue diseñado para ser modular, facilitando la expansión y reutilización de activos en diferentes niveles del juego.</p>
     </section>
 
     <section id="detalles">
@@ -52,44 +52,109 @@
         }
     </style>
 
-    <section id="imagen_principal">
-        <h2>Descripción Visual</h2>
-        <img src="../img/Escenario 2.png "width="450" height="300">
+<section id="imagen_principal">
+    <h2>Descripción Visual</h2>
+    <img src="../img/Escenario 2.png" width="450" height="300" id="main-image" onclick="expandImage(this)">
 
-        <div id="thumbnail-container">
-            <button onclick="changeVideo('proyecto1-video.mp4')">
-                <img src="../img/Poky ModelSheet.png" alt="Thumbnail 1" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-video.mp4')">
-                <img src="../img/PROPS .png" alt="Thumbnail 2" class="thumbnail">
-            </button>
-            <button onclick="changeVideo('proyecto1-extra2.mp4')">
-                <img src="../img/PROPS ANVERSO.png" alt="Thumbnail 3" class="thumbnail">
-            </button>
-            <a href="https://www.behance.net/gallery/209867911/Preproduccion-para-videojuego-POKI" target="guia a behance" class="social-btn">
-                <img src="../img/Behance-logo.png" alt="LinkedIn" class="social-icon">
-            </a>
-            
-            <style>
-                .social-icon {
-                    width: 120px;
-                    height: auto;
-                }
-            </style>
-            </a>
+    <div id="thumbnail-container">
+        <button onclick="changeVideo('proyecto1-video.mp4')">
+            <img src="../img/Poky ModelSheet.png" alt="Thumbnail 1" class="thumbnail" onclick="expandImage(this)">
+        </button>
+        <button onclick="changeVideo('proyecto1-video.mp4')">
+            <img src="../img/PROPS .png" alt="Thumbnail 2" class="thumbnail" onclick="expandImage(this)">
+        </button>
+        <button onclick="changeVideo('proyecto1-extra2.mp4')">
+            <img src="../img/PROPS ANVERSO.png" alt="Thumbnail 3" class="thumbnail" onclick="expandImage(this)">
+        </button>
+        <a href="https://www.behance.net/gallery/209867911/Preproduccion-para-videojuego-POKI" target="_blank" class="social-btn">
+            <img src="../img/Behance-logo.png" alt="Behance" class="social-icon">
+        </a>
+        <div id="overlay" onclick="closeOverlay()">
+            <span id="close-btn" onclick="closeOverlay()">×</span>
+            <img id="expanded-image" src="" alt="Expanded Image">
         </div>
-    </section>
+    </div>
+    
+</section>
 
-    <footer>
-        <p>© 2024 Julián Rodríguez - Proyecto de Preproducción</p>
-    </footer>
+<style>
+    #imagen_principal {
+        text-align: center;
+        margin: 20px auto;
+    }
 
-    <script>
-        function changeVideo(videoSrc) {
-            document.getElementById("main-video").src = videoSrc;
-            document.getElementById("main-video").play();
+    img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .thumbnail {
+        width: 100px;
+        height: auto;
+        margin: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .thumbnail:hover {
+        transform: scale(1.1);
+    }
+
+    .social-icon {
+        width: 120px;
+        height: auto;
+    }
+
+    @media (max-width: 600px) {
+        #thumbnail-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-    </script>
+    }
+
+    /* Estilos para la imagen expandida */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #overlay img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+</style>
+
+<div id="overlay" onclick="closeOverlay()">
+    <img id="expanded-image" src="" alt="Expanded Image">
+</div>
+
+<script>
+    function changeVideo(videoSrc) {
+        document.getElementById("main-video").src = videoSrc;
+        document.getElementById("main-video").play();
+    }
+
+    function expandImage(image) {
+        const overlay = document.getElementById("overlay");
+        const expandedImage = document.getElementById("expanded-image");
+
+        expandedImage.src = image.src;
+        overlay.style.display = "flex";
+    }
+
+    function closeOverlay() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
 
 </body>
 </html>

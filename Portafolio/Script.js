@@ -47,3 +47,20 @@ function moveSlide(direction) {
 slides.forEach(slide => slide.style.display = 'none'); // Oculta todos los slides al inicio
 slides[0].style.display = 'block'; // Muestra el primer slide inicialmente
 
+function changeVideo(videoSrc) {
+    const mainVideo = document.getElementById("main-video");
+    mainVideo.src = videoSrc;
+    mainVideo.play();
+}
+
+function expandImage(image) {
+    const overlay = document.getElementById("overlay");
+    const expandedImage = document.getElementById("expanded-image");
+
+    expandedImage.src = image.src;
+    overlay.style.display = "flex"; // Cambia a flex para centrar el contenido
+}
+
+function closeOverlay() {
+    document.getElementById("overlay").style.display = "none";
+}
